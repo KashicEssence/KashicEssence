@@ -1,0 +1,123 @@
+# <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kasheic Essence Portfolio</title>
+    <style>
+        body {
+            font-family: 'Papyrus', fantasy;
+            background: linear-gradient(135deg, #4a148c, #6a1b9a, #7b1fa2, #9c27b0, #d81b60, #ea80fc, #03a9f4);
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 50px 0;
+        }
+
+        header {
+            font-size: 2.5rem;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .cosmic-bg {
+            background-image: url('https://www.publicdomainpictures.net/pictures/280000/nahled/cosmic-background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            padding: 50px;
+        }
+
+        .section {
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            background: rgba(0, 0, 0, 0.7);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #80deea;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        a {
+            color: #80deea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container cosmic-bg">
+        <header>
+            <h1>Kasheic Essence</h1>
+            <p>Welcome to my cosmic journey</p>
+        </header>
+
+        <div class="section" id="about">
+            <h2>About Me</h2>
+            <p>
+                Hello, I’m Kasheena Smith, also known as "Kasheic Essence." I have a passion for metaphysics, numerology, philosophy, and all things cosmic. My journey is rooted in self-discovery, creativity, and the pursuit of deeper understanding. I enjoy merging my love for the cosmos with creative projects that reflect my inner essence and spiritual growth. 
+            </p>
+        </div>
+
+        <div class="section" id="contact">
+            <h2>Contact Info</h2>
+            <p>
+                Feel free to reach out to me for collaborations, numerology consultations, or just to connect!
+            </p>
+            <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+            <p>Instagram: <a href="https://instagram.com/yourhandle" target="_blank">@yourhandle</a></p>
+        </div>
+    </div>
+</body>
+</html> is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
